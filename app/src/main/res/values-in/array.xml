@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="klinik_array">
+        <item>KU BKKP Gunung Sahari</item>
+        <item>KU BKKP Ancol</item>
+    </string-array>
+    <string-array name="jk_array">
+        <item>Laki-laki</item>
+        <item>Perempuan</item>
+    </string-array>
+    <string-array name="marital_array">
+        <item>Menikah</item>
+        <item>Belum Menikah</item>
+    </string-array>
+    <string-array name="agama_array">
+        <item>Islam</item>
+        <item>Kristen Katolik</item>
+        <item>Kristen Protestan</item>
+        <item>Hindu</item>
+        <item>Budha</item>
+        <item>Aliran Kepercayaan</item>
+    </string-array>
+</resources>
