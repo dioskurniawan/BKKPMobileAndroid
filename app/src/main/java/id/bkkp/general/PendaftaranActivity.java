@@ -355,7 +355,11 @@ public class PendaftaranActivity extends AppCompatActivity {
         @Override
         protected Boolean doInBackground(String... arg0) {
             try {
+<<<<<<< HEAD
                 int timeoutMs = 5000;
+=======
+                int timeoutMs = 1500;
+>>>>>>> bf25cb751f4cc992e6de58b8b17607974d00cca2
                 Socket sock = new Socket();
                 SocketAddress sockaddr = new InetSocketAddress("8.8.8.8", 53);
 

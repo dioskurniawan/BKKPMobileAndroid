@@ -125,6 +125,7 @@
     <string name="msg_txt">Your phone number changed successfully.</string>
     <string name="yes">Yes</string>
     <string name="no">No</string>
+<<<<<<< HEAD
     <string name="txtprofile">Profile</string>
     <string name="profile1">Seafarer Name</string>
     <string name="profile2">Place / Date of Birth</string>
@@ -141,6 +142,8 @@
     <string name="cert5">Certificate Number</string>
     <string name="cert6">Certificate Serial Number</string>
     <string name="cert7">Expiration of Validity</string>
+=======
+>>>>>>> bf25cb751f4cc992e6de58b8b17607974d00cca2
     <string name="input_anamnese">Input Anamnese</string>
     <string name="anamnese">Anamnese</string>
     <string name="anamnese_title">If you have ever suffered from any of the following diseases, please tick the box provided</string>

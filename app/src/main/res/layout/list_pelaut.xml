@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<<<<<<< HEAD
     android:id="@+id/dataPelaut"
+=======
+>>>>>>> bf25cb751f4cc992e6de58b8b17607974d00cca2
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:background="@drawable/list_selector"
     android:orientation="horizontal"
+<<<<<<< HEAD
     android:padding="5dip">
+=======
+    android:padding="5dip" >
+>>>>>>> bf25cb751f4cc992e6de58b8b17607974d00cca2
  
     <!--  ListRow Left sied Thumbnail image -->
     <LinearLayout android:id="@+id/thumbnail"
@@ -14,8 +21,12 @@
         android:padding="3dip"
         android:layout_alignParentLeft="true"
         android:background="@drawable/image_bg"
+<<<<<<< HEAD
         android:layout_marginRight="5dip"
         android:visibility="gone">
+=======
+        android:layout_marginRight="5dip">
+>>>>>>> bf25cb751f4cc992e6de58b8b17607974d00cca2
  
         <ImageView
             android:id="@+id/list_image"

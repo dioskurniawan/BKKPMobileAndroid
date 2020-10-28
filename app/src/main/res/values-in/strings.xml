@@ -125,6 +125,7 @@
     <string name="msg_txt">Nomor ponsel Anda berhasil diubah.</string>
     <string name="yes">Ya</string>
     <string name="no">Tidak</string>
+<<<<<<< HEAD
     <string name="txtprofile">Profil</string>
     <string name="profile1">Nama Pelaut</string>
     <string name="profile2">Tempat / Tanggal Lahir</string>
@@ -141,6 +142,8 @@
     <string name="cert5">Nomor Sertifikat</string>
     <string name="cert6">Nomor Seri Sertifikat</string>
     <string name="cert7">Masa Berlaku</string>
+=======
+>>>>>>> bf25cb751f4cc992e6de58b8b17607974d00cca2
     <string name="input_anamnese">Input Anamnese</string>
     <string name="anamnese">Anamnesa</string>
     <string name="anamnese_title">Apabila Anda pernah mengidap salah satu dari penyakit di bawah ini, mohon beri tanda pada kotak yang tersedia</string>

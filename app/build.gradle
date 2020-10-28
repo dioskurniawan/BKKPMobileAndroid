@@ -9,8 +9,13 @@ android {
         applicationId "id.bkkp.general"
         minSdkVersion 15
         targetSdkVersion 29
+<<<<<<< HEAD
         versionCode 8
         versionName "2.3" //04-10-2020
+=======
+        versionCode 7
+        versionName "2.2" //04-10-2020
+>>>>>>> bf25cb751f4cc992e6de58b8b17607974d00cca2
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }

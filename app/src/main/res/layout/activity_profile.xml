@@ -222,6 +222,7 @@
               android:orientation="horizontal"
               android:weightSum="1.0">
             <TextView
+<<<<<<< HEAD
                 android:id="@+id/txt_alamat"
                 android:layout_height="match_parent"
                 android:layout_weight="0.3"
@@ -244,10 +245,14 @@
               android:weightSum="1.0">
             <TextView
                 android:id="@+id/txt_company"
+=======
+                android:id="@+id/txt_agama"
+>>>>>>> bf25cb751f4cc992e6de58b8b17607974d00cca2
                 android:layout_height="match_parent"
                 android:layout_weight="0.3"
                 android:layout_width="0dip"
                 android:layout_marginLeft="10dp"
+<<<<<<< HEAD
                 android:layout_marginTop="20dp"
                 android:textColor="@android:color/black"
                 android:text="@string/hint_company"/>
@@ -258,18 +263,7 @@
                 android:textSize="13sp"
                 android:layout_width="0dip"
                 android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ." />
-          </LinearLayout>
-          <LinearLayout
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              android:orientation="horizontal"
-              android:weightSum="1.0">
-            <TextView
-                android:id="@+id/txt_agama"
-                android:layout_height="match_parent"
-                android:layout_weight="0.3"
-                android:layout_width="0dip"
-                android:layout_marginLeft="10dp"
+=======
                 android:layout_marginTop="5dp"
                 android:textColor="@android:color/black"
                 android:text="@string/hint_agama"/>
@@ -282,6 +276,7 @@
                 android:layout_marginRight="10dp"
                 android:entries="@array/agama_array"
                 android:layout_marginTop="5dip" />
+>>>>>>> bf25cb751f4cc992e6de58b8b17607974d00cca2
           </LinearLayout>
           <LinearLayout
               android:layout_width="match_parent"
@@ -289,13 +284,58 @@
               android:orientation="horizontal"
               android:weightSum="1.0">
             <TextView
+<<<<<<< HEAD
+                android:id="@+id/txt_agama"
+=======
                 android:id="@+id/txt_marital"
+>>>>>>> bf25cb751f4cc992e6de58b8b17607974d00cca2
+                android:layout_height="match_parent"
+                android:layout_weight="0.3"
+                android:layout_width="0dip"
+                android:layout_marginLeft="10dp"
+<<<<<<< HEAD
+                android:layout_marginTop="5dp"
+                android:textColor="@android:color/black"
+                android:text="@string/hint_agama"/>
+            <Spinner
+                android:id="@+id/agama"
+=======
+                android:layout_marginTop="20dp"
+                android:textColor="@android:color/black"
+                android:text="@string/hint_marital"/>
+            <Spinner
+                android:id="@+id/marital"
+>>>>>>> bf25cb751f4cc992e6de58b8b17607974d00cca2
+                android:layout_height="match_parent"
+                android:layout_weight="0.7"
+                android:layout_width="0dip"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dp"
+<<<<<<< HEAD
+                android:entries="@array/agama_array"
+=======
+                android:entries="@array/marital_array"
+>>>>>>> bf25cb751f4cc992e6de58b8b17607974d00cca2
+                android:layout_marginTop="5dip" />
+          </LinearLayout>
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="horizontal"
+              android:weightSum="1.0">
+            <TextView
+<<<<<<< HEAD
+                android:id="@+id/txt_marital"
+=======
+                android:id="@+id/txt_alamat"
+>>>>>>> bf25cb751f4cc992e6de58b8b17607974d00cca2
                 android:layout_height="match_parent"
                 android:layout_weight="0.3"
                 android:layout_width="0dip"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="20dp"
                 android:textColor="@android:color/black"
+<<<<<<< HEAD
                 android:text="@string/hint_marital"/>
             <Spinner
                 android:id="@+id/marital"
@@ -306,6 +346,15 @@
                 android:layout_marginRight="10dp"
                 android:entries="@array/marital_array"
                 android:layout_marginTop="5dip" />
+=======
+                android:text="@string/hint_alamat"/>
+            <EditText
+                android:id="@+id/input_alamat"
+                android:layout_height="match_parent"
+                android:layout_weight="0.7"
+                android:textSize="13sp"
+                android:layout_width="0dip"/>
+>>>>>>> bf25cb751f4cc992e6de58b8b17607974d00cca2
           </LinearLayout>
           <LinearLayout
               android:layout_width="match_parent"
@@ -360,6 +409,31 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent"
               android:orientation="horizontal"
+<<<<<<< HEAD
+=======
+              android:weightSum="1.0">
+            <TextView
+                android:id="@+id/txt_company"
+                android:layout_height="match_parent"
+                android:layout_weight="0.3"
+                android:layout_width="0dip"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:textColor="@android:color/black"
+                android:text="@string/hint_company"/>
+            <EditText
+                android:id="@+id/input_company"
+                android:layout_height="match_parent"
+                android:layout_weight="0.7"
+                android:textSize="13sp"
+                android:layout_width="0dip"
+                android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ." />
+          </LinearLayout>
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="horizontal"
+>>>>>>> bf25cb751f4cc992e6de58b8b17607974d00cca2
               android:weightSum="1.0"
               android:layout_marginBottom="10dp">
             <mehdi.sakout.fancybuttons.FancyButton

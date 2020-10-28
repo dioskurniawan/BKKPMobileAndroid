@@ -46,10 +46,13 @@ public class PopActivity extends Activity {
             @Override
             public void onClick(View v) {
                 finish();
+<<<<<<< HEAD
                 MainActivity.activityMain.finish();
                 Intent intent = new Intent(PopActivity.this, MainActivity.class);
                 intent.putExtra("fragment", 3);
                 startActivity(intent);
+=======
+>>>>>>> bf25cb751f4cc992e6de58b8b17607974d00cca2
             }
         });
         FancyButton btnSave = (FancyButton) findViewById(R.id.btn_save);

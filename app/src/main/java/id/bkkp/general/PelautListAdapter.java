@@ -17,7 +17,10 @@ import android.view.ViewGroup;
 import android.view.animation.AnimationUtils;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
+<<<<<<< HEAD
 import android.widget.RelativeLayout;
+=======
+>>>>>>> bf25cb751f4cc992e6de58b8b17607974d00cca2
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -95,7 +98,10 @@ public class PelautListAdapter extends BaseAdapter {
 
 		final View finalConvertView = convertView;
 
+<<<<<<< HEAD
 		RelativeLayout dataPelaut = (RelativeLayout) convertView.findViewById(R.id.dataPelaut);
+=======
+>>>>>>> bf25cb751f4cc992e6de58b8b17607974d00cca2
 		TextView name = (TextView) convertView.findViewById(R.id.title);
 		ImageView photo = (ImageView) convertView.findViewById(R.id.list_image);
 		TextView bst = (TextView) convertView.findViewById(R.id.bst);
@@ -113,6 +119,7 @@ public class PelautListAdapter extends BaseAdapter {
 		content2.setText(mContext.getResources().getString(R.string.position)+": "+item.getContent2());
 		timestamp.setText(mContext.getResources().getString(R.string.expdate)+": "+item.getTimeStamp());
 
+<<<<<<< HEAD
 		/*if (item.getImage() != null) {
 				Glide.with(convertView.getContext()).load(item.getImage()).into(photo);
 				photo.setVisibility(View.VISIBLE);
@@ -178,6 +185,34 @@ public class PelautListAdapter extends BaseAdapter {
 			super.onProgressUpdate(values);
 		}
 
+=======
+		if (item.getImage() != null) {
+			/*try {
+				File myImageFile = new File(Environment.getExternalStorageDirectory().getAbsolutePath() +
+						File.separator + "kasandra" + File.separator + "product" + File.separator + item.getImage()); //+ "." + mFormat.name().toLowerCase());
+				Bitmap image = BitmapFactory.decodeFile(myImageFile.getAbsolutePath());
+				pImageView.setImageBitmap(image);
+				pImageView.startAnimation(AnimationUtils.loadAnimation(mContext, android.R.anim.fade_in));
+			} catch (Exception e) {*/
+				//photo.setImageUrl("https://kasandra.biz/images/"+item.getImage(), imageLoader);
+				Glide.with(convertView.getContext()).load(item.getImage()).into(photo);
+				photo.setVisibility(View.VISIBLE);
+			//}
+			/*pImageView
+					.setResponseObserver(new PImageView.ResponseObserver() {
+						@Override
+						public void onError() {
+						}
+
+						@Override
+						public void onSuccess() {
+						}
+					});*/
+		} else {
+			photo.setVisibility(View.GONE);
+		}
+		return convertView;
+>>>>>>> bf25cb751f4cc992e6de58b8b17607974d00cca2
 	}
 
 	private void showProgressDialog(boolean cancel) {

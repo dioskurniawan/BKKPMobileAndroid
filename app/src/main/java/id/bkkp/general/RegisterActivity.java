@@ -199,7 +199,10 @@ public class RegisterActivity extends AppCompatActivity implements GoogleApiClie
                 @Override
                 public void run() {
                     Intent intent = new Intent(RegisterActivity.this, MainActivity.class);
+<<<<<<< HEAD
                     intent.putExtra("fragment", 0);
+=======
+>>>>>>> bf25cb751f4cc992e6de58b8b17607974d00cca2
                     startActivity(intent);
                     finish();
                 }
@@ -238,9 +241,15 @@ public class RegisterActivity extends AppCompatActivity implements GoogleApiClie
                     if (!validateEmail()) {
                         return;
                     }
+<<<<<<< HEAD
                     /*if (!validateDob()) {
                         return;
                     }*/
+=======
+                    if (!validateDob()) {
+                        return;
+                    }
+>>>>>>> bf25cb751f4cc992e6de58b8b17607974d00cca2
                     if (!validatePhone()) {
                         return;
                     }
@@ -561,7 +570,10 @@ public class RegisterActivity extends AppCompatActivity implements GoogleApiClie
                 layoutVerify.setVisibility(View.VISIBLE);
                 btnVerifyOtp.setVisibility(View.VISIBLE);
             } else {
+<<<<<<< HEAD
                 reqStatus = false;
+=======
+>>>>>>> bf25cb751f4cc992e6de58b8b17607974d00cca2
                 String errorMsg = response.getString("error_msg");
                 Toast.makeText(getApplicationContext(),
                         errorMsg, Toast.LENGTH_LONG).show();
@@ -1041,7 +1053,11 @@ public class RegisterActivity extends AppCompatActivity implements GoogleApiClie
         @Override
         protected Boolean doInBackground(String... arg0) {
             try {
+<<<<<<< HEAD
                 int timeoutMs = 5000;
+=======
+                int timeoutMs = 1500;
+>>>>>>> bf25cb751f4cc992e6de58b8b17607974d00cca2
                 Socket sock = new Socket();
                 SocketAddress sockaddr = new InetSocketAddress("8.8.8.8", 53);
 

@@ -16,7 +16,11 @@ import java.util.Locale;
 public class Splash extends Activity {
  
     // Splash screen timer
+<<<<<<< HEAD
     private static int SPLASH_TIME_OUT = 3000;
+=======
+    private static int SPLASH_TIME_OUT = 2000;
+>>>>>>> bf25cb751f4cc992e6de58b8b17607974d00cca2
     private SessionManager session;
  
     @Override
