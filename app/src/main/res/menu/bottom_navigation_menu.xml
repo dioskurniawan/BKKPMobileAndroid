@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/action_home"
+        android:title="@string/menu_home"
+        android:icon="@mipmap/news" />
+    <item android:id="@+id/action_pelaut"
+        android:title="@string/menu_pelaut"
+        android:icon="@mipmap/sailor" />
+    <item android:id="@+id/action_rsku"
+        android:title="@string/menu_rsku"
+        android:icon="@mipmap/hospital" />
+    <item android:id="@+id/action_pendaftaran"
+        android:title="@string/menu_pendaftaran"
+        android:icon="@mipmap/mcu"/>
+</menu>

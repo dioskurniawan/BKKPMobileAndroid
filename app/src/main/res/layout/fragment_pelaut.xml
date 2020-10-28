@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PelautFragment">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:fancy="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/mainScreen"
+        android:background="#ffffff"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:layout_marginBottom="?attr/actionBarSize">
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:textStyle="bold"
+            android:textSize="17sp"
+            android:textColor="@android:color/black"
+            android:layout_gravity="center"
+            android:gravity="center"/>
+        <LinearLayout
+            android:id="@+id/search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="75dp">
+                <EditText
+                    android:id="@+id/txtSearch"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="25dp"
+                    android:layout_weight="4"
+                    android:singleLine="true"
+                    android:hint=""
+                    android:textSize="14sp"/>
+
+                <Button
+                    android:id="@+id/cleartext"
+                    android:layout_width="15dp"
+                    android:layout_height="25dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_gravity="end|center_vertical"
+                    android:text="x"
+                    android:textSize="15sp"
+                    android:textColor="@color/half_black"
+                    android:background="@android:color/transparent"/>
+
+            </FrameLayout>
+
+            <mehdi.sakout.fancybuttons.FancyButton
+                android:id="@+id/search_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="-90dp"
+                android:padding="5dp"
+                android:layout_marginTop="0dp"
+                android:gravity="start|bottom"
+                android:layout_gravity="right|end|center_vertical"
+                fancy:fb_borderColor="@color/light_grey"
+                fancy:fb_borderWidth="0dp"
+                fancy:fb_defaultColor="@color/red"
+                fancy:fb_focusColor="@color/colorPrimary"
+                fancy:fb_fontIconResource="&#xf002;"
+                fancy:fb_fontIconSize="20dp"
+                fancy:fb_iconPosition="left"
+                fancy:fb_radius="30dp"
+                fancy:fb_text="@string/cari"
+                fancy:fb_textColor="@android:color/white" />
+
+        </LinearLayout>
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/swipeRefresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ListView
+                android:id="@+id/listPelaut"
+                android:stackFromBottom="false"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"/>
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        <TextView android:id="@+id/empty"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="-500dp"
+            android:text="@string/emptylist"
+            android:textSize="16sp"
+            android:gravity="center_vertical|center_horizontal"
+            android:textColor="@color/red"
+            android:textStyle="italic"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="-100dp">
+
+        </LinearLayout>
+
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BeritaFragment">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:fancy="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/mainScreen"
+        android:background="#ffffff"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:layout_marginBottom="?attr/actionBarSize">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:weightSum="1.0">
+            <ImageView
+                android:layout_weight=".1"
+                android:layout_width="0dip"
+                android:layout_height="60dp"
+                android:src="@drawable/logo_dephub"
+                android:contentDescription="@string/app_name"/>
+
+            <TextView
+                android:layout_weight=".9"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="17sp"
+                android:textColor="@color/black"
+                android:text="@string/app_desc"/>
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            app:cardCornerRadius="6dp"
+            android:layout_margin="7dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.smarteist.autoimageslider.SliderView
+                android:id="@+id/imageSlider"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                app:sliderAnimationDuration="600"
+                app:sliderAutoCycleDirection="back_and_forth"
+                app:sliderAutoCycleEnabled="true"
+                app:sliderIndicatorAnimationDuration="600"
+                app:sliderIndicatorGravity="center_horizontal|bottom"
+                app:sliderIndicatorMargin="15dp"
+                app:sliderIndicatorOrientation="horizontal"
+                app:sliderIndicatorPadding="3dp"
+                app:sliderIndicatorRadius="2dp"
+                app:sliderIndicatorSelectedColor="#5A5A5A"
+                app:sliderIndicatorUnselectedColor="#FFF"
+                app:sliderScrollTimeInSec="1"
+                app:sliderStartAutoCycle="true" />
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/berita"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/news"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/blue_background"
+            android:fontFamily="sans-serif-light"
+            android:layout_marginLeft="5dp"/>
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/swipeRefresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ListView
+                android:id="@+id/listBerita"
+                android:stackFromBottom="false"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        <TextView android:id="@+id/empty"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="-500dp"
+            android:text="@string/emptylist"
+            android:textSize="16sp"
+            android:gravity="center_vertical|center_horizontal"
+            android:textColor="@color/red"
+            android:textStyle="italic"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="-100dp">
+
+        </LinearLayout>
+
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--<color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>-->
+    <color name="colorPrimary">#0E79B2</color>
+    <color name="colorPrimaryDark">#191923</color>
+    <color name="colorAccent">#F39237</color>
+    <color name="white">#FFFFFF</color>
+    <color name="red">#FF0000</color>
+    <color name="light_grey">#cccccc</color>
+    <color name="light_grey2">#e5e5e5</color>
+    <color name="lightgreen2">#eeffb7</color>
+    <color name="red_background">#D32F2F</color>
+    <color name="darkgreen">#39c05f</color>
+    <color name="bg_login">#4489fe</color>
+    <color name="lightblue">#cce2fe</color>
+    <color name="lightgreen">#02ff2c</color>
+    <color name="lightgreen1">#98ce1b</color>
+    <color name="lightaqua">#9ed8f6</color>
+    <color name="half_black">#808080</color>
+    <color name="white_pressed">#f1f1f1</color>
+    <color name="pink">#e91e63</color>
+    <color name="pink_pressed">#ec407a</color>
+    <color name="blue_semi_transparent">#805677fc</color>
+    <color name="blue_semi_transparent_pressed">#80738ffe</color>
+    <color name="blue_background">#1976D2</color>
+    <color name="orange_background">#F57C00</color>
+    <color name="purple_background">#7B1FA2</color>
+    <color name="black">#000000</color>
+
+    <color name="pallete1">#FBFEF9</color>
+    <color name="pallete2">#191923</color>
+    <color name="pallete3">#0E79B2</color>
+    <color name="pallete4">#BF1363</color>
+    <color name="pallete5">#F39237</color>
+</resources>

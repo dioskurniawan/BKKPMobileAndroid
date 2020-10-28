@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="id.bkkp.general">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:name=".AppController"
+        android:allowBackup="true"
+        android:configChanges="locale|orientation"
+        android:icon="@mipmap/dephub"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/dephub"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="m">
+        <activity android:name=".PelautDetailActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <activity
+            android:name=".Splash"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:theme="@style/ThemeOverlay.MyNoTitleActivity"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.LOGINBKKP" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".RegisterActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:theme="@style/ThemeOverlay.MyNoTitleActivity"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.REGISTERBKKP" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ForgotActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:theme="@style/ThemeOverlay.MyNoTitleActivity"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.FORGOTBKKP" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter></activity>
+        <activity
+            android:name=".PendaftaranActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:theme="@style/ThemeOverlay.MyNoTitleActivity"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.PENDAFTARAN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".PendaftaranResultActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:theme="@style/ThemeOverlay.MyNoTitleActivity"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.PENDAFTARANRES" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".PopActivity"
+            android:theme="@style/AppTheme.PopMe" />
+        <activity
+            android:name=".ProfileActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:theme="@style/ThemeOverlay.MyNoTitleActivity"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.PROFILEBKKP" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".AnamneseActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:theme="@style/ThemeOverlay.MyNoTitleActivity"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.ANAMNESE" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".HistoryActivity"
+            android:label="@string/app_name"
+            android:theme="@style/ThemeOverlay.MyNoTitleActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.HISTORYBKKP" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Localize"
+            android:label="@string/app_name"
+            android:theme="@style/ThemeOverlay.MyNoTitleActivity"></activity>
+
+        <receiver
+            android:name=".SmsBroadcastReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.android.gms.auth.api.phone.SMS_RETRIEVE" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>
