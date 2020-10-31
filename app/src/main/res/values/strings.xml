@@ -117,7 +117,7 @@
     <string name="confirm">Confirm</string>
     <string name="confirmotp">Verify</string>
     <string name="confirm_txt">Are you sure the data entered is correct?</string>
-    <string name="confirm_txt1">Are you sure you will make an appointment for inspection on&#160;</string>
+    <string name="confirm_txt1">Are you sure you will make an appointment for medical check-up on&#160;</string>
     <string name="confirm_txt2">Change your phone number</string>
     <string name="confirm_txt3">Please check your SMS inbox and enter the OTP (one-time password) code below:</string>
     <string name="txt_msg">Please enter your BST number and password!</string>
@@ -125,7 +125,6 @@
     <string name="msg_txt">Your phone number changed successfully.</string>
     <string name="yes">Yes</string>
     <string name="no">No</string>
-<<<<<<< HEAD
     <string name="txtprofile">Profile</string>
     <string name="profile1">Seafarer Name</string>
     <string name="profile2">Place / Date of Birth</string>
@@ -142,8 +141,6 @@
     <string name="cert5">Certificate Number</string>
     <string name="cert6">Certificate Serial Number</string>
     <string name="cert7">Expiration of Validity</string>
-=======
->>>>>>> bf25cb751f4cc992e6de58b8b17607974d00cca2
     <string name="input_anamnese">Input Anamnese</string>
     <string name="anamnese">Anamnese</string>
     <string name="anamnese_title">If you have ever suffered from any of the following diseases, please tick the box provided</string>

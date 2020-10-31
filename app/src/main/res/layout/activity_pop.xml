@@ -25,12 +25,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
-<<<<<<< HEAD
                 android:layout_marginTop="10dp"
                 android:background="@color/white">
-=======
-                android:layout_marginTop="10dp">
->>>>>>> bf25cb751f4cc992e6de58b8b17607974d00cca2
 
                 <TextView
                     android:id="@+id/txt1"
@@ -54,10 +50,7 @@
                     android:gravity="top|left"
                     android:maxLength="10"
                     android:background="@drawable/edittextbg3"
-<<<<<<< HEAD
                     android:textColor="@color/black"
-=======
->>>>>>> bf25cb751f4cc992e6de58b8b17607974d00cca2
                     android:hint="10 digit BST"
                     android:singleLine="true"/>
 

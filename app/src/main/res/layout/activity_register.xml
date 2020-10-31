@@ -139,6 +139,8 @@
                 android:layout_marginEnd="16dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
+                android:textSize="29sp"
+                android:textStyle="bold"
                 android:ems="10"
                 android:gravity="center"
                 android:hint=""
@@ -195,24 +197,16 @@
             android:textStyle="bold"
             android:textColor="@android:color/black"
             android:layout_gravity="start"
-<<<<<<< HEAD
             android:text="@string/dob"
             android:visibility="gone"/>
-=======
-            android:text="@string/dob"/>
->>>>>>> bf25cb751f4cc992e6de58b8b17607974d00cca2
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/input_layout_datetime1"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dip"
             android:layout_marginRight="10dp"
-<<<<<<< HEAD
             android:theme="@style/TextLabel"
             android:visibility="gone">
-=======
-            android:theme="@style/TextLabel">
->>>>>>> bf25cb751f4cc992e6de58b8b17607974d00cca2
 
             <EditText
                 android:id="@+id/seafarer_dob"
@@ -225,6 +219,7 @@
                 android:textSize="14sp" />
         </com.google.android.material.textfield.TextInputLayout>
         <TextView
+            android:id="@+id/txtEmail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"

@@ -415,7 +415,7 @@ public class PendaftaranFragment extends Fragment implements GoogleApiClient.Con
         }
       }, 2000);
     }
-    if(session.isLoggedIn() && session.sUserBST().equals(String.valueOf(-999))) {
+    if(session.isLoggedIn() && session.sUserBST().equals(String.valueOf(-999)) && !session.isBstExist()) {
         Intent i = new Intent(mContext, PopActivity.class);
         i.putExtra("num", 1);
         startActivity(i);
@@ -740,7 +740,7 @@ public class PendaftaranFragment extends Fragment implements GoogleApiClient.Con
     private void changePhone(String hashString, String phone) {
         Cache cache2 = AppController.getInstance().getRequestQueue().getCache();
         cache2.clear();
-        Cache.Entry entry2 = cache2.get(URL_LOGIN+"?change_number=" + hashString + "&bst=" + session.sUserBST() + "&old_phone=" + session.phone() + "&phone=" + phone + "&email=" + session.email());
+        Cache.Entry entry2 = cache2.get(URL_LOGIN+"?change_number=" + hashString + "&old_phone=" + session.phone() + "&phone=" + phone + "&email=" + session.email());
 
         //Toast.makeText(mContext, "page: " + URL_INPUT+"?pelaut=", Toast.LENGTH_SHORT).show();
         if (entry2 != null) {
@@ -757,7 +757,7 @@ public class PendaftaranFragment extends Fragment implements GoogleApiClient.Con
         } else {
             // making fresh volley request and getting json
             JsonObjectRequest jsonReq2 = new JsonObjectRequest(Request.Method.GET,
-                    URL_LOGIN+"?change_number=" + hashString + "&bst=" + session.sUserBST() + "&old_phone=" + session.phone() + "&phone=" + phone + "&email=" + session.email(), null, new Response.Listener<JSONObject>() {
+                    URL_LOGIN+"?change_number=" + hashString + "&old_phone=" + session.phone() + "&phone=" + phone + "&email=" + session.email(), null, new Response.Listener<JSONObject>() {
 
                 @Override
                 public void onResponse(JSONObject response) {
@@ -936,11 +936,7 @@ public class PendaftaranFragment extends Fragment implements GoogleApiClient.Con
     @Override
     protected Boolean doInBackground(String... arg0) {
       try {
-<<<<<<< HEAD
         int timeoutMs = 5000;
-=======
-        int timeoutMs = 1500;
->>>>>>> bf25cb751f4cc992e6de58b8b17607974d00cca2
         Socket sock = new Socket();
         SocketAddress sockaddr = new InetSocketAddress("8.8.8.8", 53);
 

@@ -34,6 +34,8 @@ import java.net.InetSocketAddress;
 import java.net.Socket;
 import java.net.SocketAddress;
 
+import mehdi.sakout.fancybuttons.FancyButton;
+
 public class PelautDetailActivity extends AppCompatActivity implements SwipeRefreshLayout.OnRefreshListener {
 
     String intentFragment;
@@ -74,6 +76,18 @@ public class PelautDetailActivity extends AppCompatActivity implements SwipeRefr
         cert5 = findViewById(R.id.cert5);
         cert6 = findViewById(R.id.cert6);
         cert7 = findViewById(R.id.cert7);
+        final FancyButton btnBack = (FancyButton) findViewById(R.id.back_button);
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getApplicationContext(),
+                        MainActivity.class);
+                i.putExtra("fragment", 1);
+                startActivity(i);
+                finish();
+            }
+        });
+
         new isOnline().execute("");
         handler7.postDelayed(new Runnable() {
             @Override
@@ -160,7 +174,8 @@ public class PelautDetailActivity extends AppCompatActivity implements SwipeRefr
                     JSONObject feedObj = (JSONObject) feedArray.get(i);
                     //JSONObject feedObj = response.getJSONObject("queue");
 
-                    no_bst.setText(feedObj.getString("bst"));
+                    String first7bst = feedObj.getString("bst").substring(0,7);
+                    no_bst.setText("BST #"+feedObj.getString("bst").replace(first7bst, "*******"));
                     nama_pelaut.setText(feedObj.getString("profile1"));
                     profile2.setText(feedObj.getString("profile2"));
                     profile3.setText(feedObj.getString("profile3"));

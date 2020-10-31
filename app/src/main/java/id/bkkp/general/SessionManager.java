@@ -267,9 +267,16 @@ public class SessionManager {
 	public boolean isInternetAvailable(){
 		return pref.getBoolean("online", false);
 	}
-
 	public void setInternetAvailable(boolean isOnline) {
 		editor.putBoolean("online", isOnline);
+		editor.commit();
+	}
+
+	public boolean isBstExist(){
+		return pref.getBoolean("bstexist", false);
+	}
+	public void setBstExist(boolean isBstExist) {
+		editor.putBoolean("bstexist", isBstExist);
 		editor.commit();
 	}
 

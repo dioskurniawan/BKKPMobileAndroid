@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "441204106697",
+    "firebase_url": "https://bkkp-mobile.firebaseio.com",
+    "project_id": "bkkp-mobile",
+    "storage_bucket": "bkkp-mobile.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:441204106697:android:00dd3955fe52148bc03418",
+        "android_client_info": {
+          "package_name": "id.bkkp.general"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "441204106697-6nkvnvdubp9156khquritgpqtu4kamci.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "id.bkkp.general",
+            "certificate_hash": "27acf596b680604880377ce95aa53a7963a10f77"
+          }
+        },
+        {
+          "client_id": "441204106697-u4bknp1batfk985mqt8dadh3lk28b8uv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA9fiqcMls6XNIegsOPqgeChpueNW3QAsY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "441204106697-u4bknp1batfk985mqt8dadh3lk28b8uv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -14,6 +14,7 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.IntentSender;
 import android.os.AsyncTask;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.text.Editable;
@@ -103,6 +104,7 @@ public class RegisterActivity extends AppCompatActivity implements GoogleApiClie
     //private EditText inputBST;
     private EditText inputEmail, inputPhone, inputPasswd, inputPasswd2;
     //private TextInputLayout inputLayoutBST
+    private TextView txtEmail, textView3;
     private TextInputLayout inputLayoutEmail, inputLayoutDob, inputLayoutPasswd, inputLayoutPasswd2;
     private FancyButton btnOk;
     private SessionManager session;
@@ -119,6 +121,8 @@ public class RegisterActivity extends AppCompatActivity implements GoogleApiClie
     private String serverDate;
     int dateNo;
     Boolean reqStatus = false;
+    AlertDialog.Builder builder;
+    AlertDialog alertDialog;
 
     public static String URL_LOGIN = "https://bkkp.dephub.go.id/bkkpapi/loginapp_dev.php";
 
@@ -130,6 +134,8 @@ public class RegisterActivity extends AppCompatActivity implements GoogleApiClie
         // Session manager
         session = new SessionManager(getApplicationContext());
 
+        builder=new AlertDialog.Builder(new ContextThemeWrapper(RegisterActivity.this, android.R.style.Theme_Black_NoTitleBar));
+
         new isOnline().execute("");
         // Check if user is already logged in or not
 
@@ -139,6 +145,8 @@ public class RegisterActivity extends AppCompatActivity implements GoogleApiClie
         TextView title = (TextView) findViewById(R.id.toolbar_title);
         //title.setText(getResources().getString(R.string.labelloginuser));
 
+        txtEmail = (TextView) findViewById(R.id.txtEmail);
+        textView3 = (TextView) findViewById(R.id.textView3);
         //inputLayoutBST = (TextInputLayout) findViewById(R.id.input_layout_bst);
         inputLayoutEmail = (TextInputLayout) findViewById(R.id.input_layout_email);
         inputLayoutDob = (TextInputLayout) findViewById(R.id.input_layout_datetime1);
@@ -199,10 +207,7 @@ public class RegisterActivity extends AppCompatActivity implements GoogleApiClie
                 @Override
                 public void run() {
                     Intent intent = new Intent(RegisterActivity.this, MainActivity.class);
-<<<<<<< HEAD
                     intent.putExtra("fragment", 0);
-=======
->>>>>>> bf25cb751f4cc992e6de58b8b17607974d00cca2
                     startActivity(intent);
                     finish();
                 }
@@ -241,15 +246,9 @@ public class RegisterActivity extends AppCompatActivity implements GoogleApiClie
                     if (!validateEmail()) {
                         return;
                     }
-<<<<<<< HEAD
                     /*if (!validateDob()) {
                         return;
                     }*/
-=======
-                    if (!validateDob()) {
-                        return;
-                    }
->>>>>>> bf25cb751f4cc992e6de58b8b17607974d00cca2
                     if (!validatePhone()) {
                         return;
                     }
@@ -393,7 +392,11 @@ public class RegisterActivity extends AppCompatActivity implements GoogleApiClie
     }
 
     @Override public void onOtpTimeout() {
-        Toast.makeText(this, "Time out, please resend", Toast.LENGTH_LONG).show();
+        Toast.makeText(this, "OTP Timed out", Toast.LENGTH_LONG).show();
+        Intent i = new Intent(getApplicationContext(), LoginActivity.class);
+        startActivity(i);
+        finish();
+
     }
 
     @Override public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
@@ -502,7 +505,89 @@ public class RegisterActivity extends AppCompatActivity implements GoogleApiClie
         }
     }*/
 
+    /*private void checkOTPExptime() {
+        Cache cache2 = AppController.getInstance().getRequestQueue().getCache();
+        cache2.clear();
+        Cache.Entry entry2 = cache2.get(URL_LOGIN+"?change_bst=" + bst10 + "&jwt=" + session.sJWT() + "&phone=" + session.phone());
+
+        //Toast.makeText(mContext, "page: " + URL_INPUT+"?pelaut=", Toast.LENGTH_SHORT).show();
+        if (entry2 != null) {
+            try {
+                String data = new String(entry2.data, "UTF-8");
+                try {
+                    parseJsonFeed(new JSONObject(data));
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            } catch (UnsupportedEncodingException e) {
+                e.printStackTrace();
+            }
+        } else {
+            // making fresh volley request and getting json
+            JsonObjectRequest jsonReq2 = new JsonObjectRequest(Request.Method.GET,
+                    URL_LOGIN+"?change_bst=" + bst10 + "&jwt=" + session.sJWT() + "&phone=" + session.phone(), null, new Response.Listener<JSONObject>() {
+
+                @Override
+                public void onResponse(JSONObject response) {
+                    VolleyLog.d("BKKP debug1", "Response: " + response.toString());
+                    parseJsonFeed(response);
+                }
+            }, new Response.ErrorListener() {
+
+                @Override
+                public void onErrorResponse(VolleyError error) {
+                    VolleyLog.d("BKKP debug2", "Error: " + error.getMessage());
+                }
+            });
+            jsonReq2.setRetryPolicy(new RetryPolicy() {
+                @Override
+                public int getCurrentTimeout() {
+                    return 50000;
+                }
+
+                @Override
+                public int getCurrentRetryCount() {
+                    return 50000;
+                }
+
+                @Override
+                public void retry(VolleyError error) throws VolleyError {
+
+                }
+            });
+            // Adding request to volley request queue
+            AppController.getInstance().addToRequestQueue(jsonReq2);
+        }
+    }
+
+    private void parseJsonFeed(JSONObject response) {
+        try {
+            hideProgressDialog();
+            boolean error = response.getBoolean("error");
+            if (!error) {
+                //JSONArray feedArray = response.getJSONArray("bst");
+                //String returnmessage = response.getString("msg");
+                //Toast.makeText(RegisterActivity.this, returnmessage, Toast.LENGTH_LONG).show();
+                Log.d("BKKP", "BST changed successfully: ");// + feedArray.toString());
+
+                session.setUserBST(bst10);
+                finish();
+                Intent i = new Intent(getApplicationContext(), LoginActivity.class);
+                startActivity(i);
+            } else {
+                String errorMsg = response.getString("error_msg");
+                Toast.makeText(RegisterActivity.this,
+                        errorMsg, Toast.LENGTH_LONG).show();
+            }
+
+        } catch (JSONException e) {
+            hideProgressDialog();
+            e.printStackTrace();
+        }
+    }*/
+
     private void sendHash(String hashString) {
+        showMessage("",getResources().getString(R.string.loading2));
         Cache cache2 = AppController.getInstance().getRequestQueue().getCache();
         cache2.clear();
         Cache.Entry entry2 = cache2.get(URL_LOGIN+"?hash=" + hashString + "&phone=" + session.phone() + "&email=" + session.email());
@@ -565,15 +650,18 @@ public class RegisterActivity extends AppCompatActivity implements GoogleApiClie
                 String returnmessage = response.getString("msg");
                 //Toast.makeText(RegisterActivity.this, returnmessage, Toast.LENGTH_LONG).show();
                 Log.d("BKKP", "BKKP success register: " + feedArray.toString());
-                layoutInput.setVisibility(View.GONE);
+                //layoutInput.setVisibility(View.GONE);
+                inputPhone.setEnabled(false);
+                textView3.setVisibility(View.GONE);
+                txtEmail.setVisibility(View.GONE);
+                inputLayoutEmail.setVisibility(View.GONE);
                 btnGetOtp.setVisibility(View.GONE);
                 layoutVerify.setVisibility(View.VISIBLE);
                 btnVerifyOtp.setVisibility(View.VISIBLE);
+                alertDialog.dismiss();
             } else {
-<<<<<<< HEAD
+                alertDialog.dismiss();
                 reqStatus = false;
-=======
->>>>>>> bf25cb751f4cc992e6de58b8b17607974d00cca2
                 String errorMsg = response.getString("error_msg");
                 Toast.makeText(getApplicationContext(),
                         errorMsg, Toast.LENGTH_LONG).show();
@@ -604,6 +692,7 @@ public class RegisterActivity extends AppCompatActivity implements GoogleApiClie
       }*/
         } catch (JSONException e) {
             e.printStackTrace();
+            alertDialog.dismiss();
         }
     }
 
@@ -677,6 +766,7 @@ public class RegisterActivity extends AppCompatActivity implements GoogleApiClie
                 //session.setLogin(true);
                 Toast.makeText(getApplicationContext(),
                         response.getString("msg"), Toast.LENGTH_LONG).show();
+                layoutInput.setVisibility(View.GONE);
                 layoutVerify.setVisibility(View.GONE);
                 btnVerifyOtp.setVisibility(View.GONE);
                 layoutPass.setVisibility(View.VISIBLE);
@@ -1053,11 +1143,7 @@ public class RegisterActivity extends AppCompatActivity implements GoogleApiClie
         @Override
         protected Boolean doInBackground(String... arg0) {
             try {
-<<<<<<< HEAD
                 int timeoutMs = 5000;
-=======
-                int timeoutMs = 1500;
->>>>>>> bf25cb751f4cc992e6de58b8b17607974d00cca2
                 Socket sock = new Socket();
                 SocketAddress sockaddr = new InetSocketAddress("8.8.8.8", 53);
 
@@ -1081,13 +1167,13 @@ public class RegisterActivity extends AppCompatActivity implements GoogleApiClie
 
     }
 
-    public void showMessage(String title, String message)
-    {
-        AlertDialog.Builder builder=new AlertDialog.Builder(this);
+    public void showMessage(String title, String message) {
+        //AlertDialog.Builder builder=new AlertDialog.Builder(new ContextThemeWrapper(RegisterActivity.this, android.R.style.Theme_Black_NoTitleBar));
         builder.setCancelable(true);
         builder.setTitle(title);
         builder.setMessage(message);
-        builder.show();
+        alertDialog = builder.create();
+        alertDialog.show();
     }
 
     @Override

@@ -2,6 +2,8 @@ package id.bkkp.general;
 
 import androidx.annotation.NonNull;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.firebase.analytics.FirebaseAnalytics;
+
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.viewpager.widget.ViewPager;
@@ -24,22 +26,19 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
     SessionManager session;
     private static final int TIME_INTERVAL = 2000;
     private long mBackPressed;
-<<<<<<< HEAD
     public static MainActivity activityMain;
-=======
->>>>>>> bf25cb751f4cc992e6de58b8b17607974d00cca2
+    private FirebaseAnalytics mFirebaseAnalytics;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        // Obtain the FirebaseAnalytics instance.
+        mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
         session = new SessionManager(getApplicationContext());
         // kita set default nya Home Fragment
         //intentFragment = getIntent().getExtras().getInt("fragment");
-<<<<<<< HEAD
         activityMain = this;
-=======
->>>>>>> bf25cb751f4cc992e6de58b8b17607974d00cca2
         Bundle bundle = getIntent().getExtras();
         if (bundle!= null) {// to avoid the NullPointerException
             intentFragment = bundle.getInt("fragment");
@@ -62,10 +61,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         //}
         //session.setLang(Locale.getDefault().getLanguage());
     }
-<<<<<<< HEAD
 
-=======
->>>>>>> bf25cb751f4cc992e6de58b8b17607974d00cca2
     private boolean loadFragment(Fragment fragment) {
         if (fragment != null) {
             getSupportFragmentManager().beginTransaction()

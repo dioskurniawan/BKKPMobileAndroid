@@ -15,11 +15,31 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:background="@color/light_grey2">
+                <mehdi.sakout.fancybuttons.FancyButton
+                    android:id="@+id/back_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="3dp"
+                    android:paddingLeft="3dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:gravity="start|bottom"
+                    android:layout_gravity="left|start|center_vertical"
+                    fancy:fb_borderColor="@color/light_grey"
+                    fancy:fb_borderWidth="0dp"
+                    fancy:fb_defaultColor="@android:color/white"
+                    fancy:fb_focusColor="@color/light_grey"
+                    fancy:fb_fontIconResource="&#xf053;"
+                    fancy:fb_fontIconSize="35dp"
+                    fancy:fb_iconPosition="left"
+                    fancy:fb_radius="5dp"
+                    fancy:fb_text=""
+                    fancy:fb_textColor="@color/light_grey2" />
                 <ImageView
                     android:id="@+id/imgUser"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:layout_marginTop="3dp"
+                    android:layout_marginTop="-20dp"
                     android:src="@drawable/no_image"
                     android:layout_gravity="center"/>
 
@@ -86,7 +106,8 @@
                         android:layout_gravity="center"
                         android:layout_marginLeft="10dp"
                         android:layout_marginRight="10dp"
-                        android:background="@color/light_grey2"/>
+                        android:background="@color/light_grey2"
+                        android:visibility="gone"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -95,7 +116,8 @@
                         android:textColor="@android:color/black"
                         android:text="@string/profile2"
                         android:layout_marginLeft="20dp"
-                        android:layout_marginRight="20dp"/>
+                        android:layout_marginRight="20dp"
+                        android:visibility="gone"/>
                     <TextView
                         android:id="@+id/profile2"
                         android:layout_width="wrap_content"
@@ -105,14 +127,16 @@
                         android:textColor="@android:color/black"
                         android:textStyle="bold"
                         android:layout_marginLeft="20dp"
-                        android:layout_marginRight="20dp"/>
+                        android:layout_marginRight="20dp"
+                        android:visibility="gone"/>
                     <LinearLayout
                         android:layout_width="fill_parent"
                         android:layout_height="2dip"
                         android:layout_gravity="center"
                         android:layout_marginLeft="10dp"
                         android:layout_marginRight="10dp"
-                        android:background="@color/light_grey2"/>
+                        android:background="@color/light_grey2"
+                        android:visibility="gone"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -121,7 +145,8 @@
                         android:textColor="@android:color/black"
                         android:text="@string/profile3"
                         android:layout_marginLeft="20dp"
-                        android:layout_marginRight="20dp"/>
+                        android:layout_marginRight="20dp"
+                        android:visibility="gone"/>
                     <TextView
                         android:id="@+id/profile3"
                         android:layout_width="wrap_content"
@@ -131,14 +156,16 @@
                         android:textColor="@android:color/black"
                         android:textStyle="bold"
                         android:layout_marginLeft="20dp"
-                        android:layout_marginRight="20dp"/>
+                        android:layout_marginRight="20dp"
+                        android:visibility="gone"/>
                     <LinearLayout
                         android:layout_width="fill_parent"
                         android:layout_height="2dip"
                         android:layout_gravity="center"
                         android:layout_marginLeft="10dp"
                         android:layout_marginRight="10dp"
-                        android:background="@color/light_grey2"/>
+                        android:background="@color/light_grey2"
+                        android:visibility="gone"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -147,7 +174,8 @@
                         android:textColor="@android:color/black"
                         android:text="@string/profile4"
                         android:layout_marginLeft="20dp"
-                        android:layout_marginRight="20dp"/>
+                        android:layout_marginRight="20dp"
+                        android:visibility="gone"/>
                     <TextView
                         android:id="@+id/profile4"
                         android:layout_width="wrap_content"
@@ -157,14 +185,16 @@
                         android:textColor="@android:color/black"
                         android:textStyle="bold"
                         android:layout_marginLeft="20dp"
-                        android:layout_marginRight="20dp"/>
+                        android:layout_marginRight="20dp"
+                        android:visibility="gone"/>
                     <LinearLayout
                         android:layout_width="fill_parent"
                         android:layout_height="2dip"
                         android:layout_gravity="center"
                         android:layout_marginLeft="10dp"
                         android:layout_marginRight="10dp"
-                        android:background="@color/light_grey2"/>
+                        android:background="@color/light_grey2"
+                        android:visibility="gone"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -190,7 +220,8 @@
                         android:layout_gravity="center"
                         android:layout_marginLeft="10dp"
                         android:layout_marginRight="10dp"
-                        android:background="@color/light_grey2"/>
+                        android:background="@color/light_grey2"
+                        android:visibility="gone"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -199,7 +230,8 @@
                         android:textColor="@android:color/black"
                         android:text="@string/profile6"
                         android:layout_marginLeft="20dp"
-                        android:layout_marginRight="20dp"/>
+                        android:layout_marginRight="20dp"
+                        android:visibility="gone"/>
                     <TextView
                         android:id="@+id/profile6"
                         android:layout_width="wrap_content"
@@ -209,14 +241,16 @@
                         android:textColor="@android:color/black"
                         android:textStyle="bold"
                         android:layout_marginLeft="20dp"
-                        android:layout_marginRight="20dp"/>
+                        android:layout_marginRight="20dp"
+                        android:visibility="gone"/>
                     <LinearLayout
                         android:layout_width="fill_parent"
                         android:layout_height="2dip"
                         android:layout_gravity="center"
                         android:layout_marginLeft="10dp"
                         android:layout_marginRight="10dp"
-                        android:background="@color/light_grey2"/>
+                        android:background="@color/light_grey2"
+                        android:visibility="gone"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -225,7 +259,8 @@
                         android:textColor="@android:color/black"
                         android:text="@string/profile7"
                         android:layout_marginLeft="20dp"
-                        android:layout_marginRight="20dp"/>
+                        android:layout_marginRight="20dp"
+                        android:visibility="gone"/>
                     <TextView
                         android:id="@+id/profile7"
                         android:layout_width="wrap_content"
@@ -235,7 +270,8 @@
                         android:textColor="@android:color/black"
                         android:textStyle="bold"
                         android:layout_marginLeft="20dp"
-                        android:layout_marginRight="20dp"/>
+                        android:layout_marginRight="20dp"
+                        android:visibility="gone"/>
 
                     <TextView
                         android:layout_width="match_parent"
